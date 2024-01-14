@@ -1,0 +1,22 @@
+<div class="main">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <span style="width: 2%;margin-right: 3px;"><img class="img-fluid" src='../assets/img/logo.png'></span>
+      <div class="nav-items">
+        <button mat-button mat-raised-button class="btn" routerLink="/index">Home</button>
+        <button mat-button mat-raised-button class="btn" routerLink="/about">About NBA</button>
+        <button mat-button mat-raised-button class="btn" routerLink="/contact">Contact Us</button>
+        <button mat-button mat-raised-button class="btn" routerLink="/gallery">Gallery</button>
+        <button mat-button mat-raised-button class="btn" *ngIf="isActive" (click)="goToCreateTeam(userID)">Create Team</button>
+        <button mat-button mat-raised-button class="btn" *ngIf="isActive" (click)="goToMyTeams(userID)">My Teams</button>
+        <button mat-button mat-raised-button class="btn" *ngIf="!isActive" routerLink="/create-account">Create Account</button>
+        <button mat-button mat-raised-button class="btn" *ngIf="isAdmin" routerLink="/all-teams-administration">All teams</button>
+        <button mat-button mat-raised-button class="btn" *ngIf="!isAdmin" routerLink="/all-teams">All teams</button>
+        <button mat-button mat-raised-button class="btn" *ngIf="isAdmin" routerLink="/all-users">All users</button>
+        <button mat-button mat-raised-button class="btn" *ngIf="!isActive" routerLink="/login">Login</button>
+        <button mat-button mat-raised-button class="btn" *ngIf="isActive" (click)="logout()">Logout</button>        
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</div>

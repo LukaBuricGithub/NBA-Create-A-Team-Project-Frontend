@@ -1,0 +1,22 @@
+<main class="article">
+    <h1>Login</h1>
+    <form class="login-form" [formGroup]="loginForm">
+        <mat-form-field appearance="outline" class="input-field">
+            <mat-label>E-mail address:</mat-label>
+            <input matInput placeholder="Your e-mail address..." formControlName="email">
+            <mat-error *ngIf="loginForm.get('email')?.hasError('required') || loginForm.get('email')?.hasError('email')">Please enter your e-mail address</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="input-field">
+            <mat-label>Password:</mat-label>
+            <input matInput placeholder="Your password..."  formControlName="password">
+            <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Please enter your password</mat-error>
+        </mat-form-field>
+        <br>
+        <button mat-button mat-raised-button color="primary" class="btn-send-data" (click)="submitData()" [disabled]="!enableSubmitBtn()">Login</button>
+    </form>
+</main>
+<div class="footer">
+    <p>Copyright &copy; 2023 Luka Burić <br><a href="https://github.com/LukaBuricGithub/Napredne-tehnike-programiranja-web-servisa-.open-source-"><img src="../assets/img/GitHub-Mark-Light-32px.png" title="Github" alt="Github"></a></p>
+</div>
+

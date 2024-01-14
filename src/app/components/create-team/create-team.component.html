@@ -1,0 +1,72 @@
+<main class="article">
+    <h1>Create team</h1>
+    <form class="create-team-form" [formGroup]="createTeamForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Team name:</mat-label>
+            <input matInput placeholder="Team name..." formControlName="teamName">
+            <mat-error *ngIf="createTeamForm.get('teamName')?.hasError('required')">Please enter team name</mat-error>
+        </mat-form-field>
+        <br>
+    </form>
+   
+
+    <mat-form-field class="insertPlayer" appearance="outline">
+        <mat-label>Select player 1:</mat-label>
+        <mat-select [(ngModel)]="selectedPlayer1">
+            <mat-form-field appearance="fill">
+                <input matInput style="width: 100%;" placeholder="Player name..." (keyup)="onKey1($event)">
+                </mat-form-field>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let player1 of listOfPlayers1" [value]="player1">{{player1.first_name+" "+player1.last_name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="insertPlayer" appearance="outline">
+        <mat-label>Select player 2:</mat-label>
+        <mat-select [(ngModel)]="selectedPlayer2">
+            <mat-form-field appearance="fill">
+                <input matInput style="width: 100%;" placeholder="Player name..." (keyup)="onKey2($event)">
+                </mat-form-field>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let player2 of listOfPlayers2" [value]="player2">{{player2.first_name+" "+player2.last_name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="insertPlayer" appearance="outline">
+        <mat-label>Select player 3:</mat-label>
+        <mat-select [(ngModel)]="selectedPlayer3">
+            <mat-form-field style="width: 100%;" appearance="fill">
+                <input matInput  placeholder="Player name..." (keyup)="onKey3($event)">
+                </mat-form-field>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let player3 of listOfPlayers3" [value]="player3">{{player3.first_name+" "+player3.last_name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="insertPlayer" appearance="outline">
+        <mat-label>Select player 4:</mat-label>
+        <mat-select [(ngModel)]="selectedPlayer4">
+            <mat-form-field style="width: 100%;" appearance="fill">
+                <input matInput  placeholder="Player name..." (keyup)="onKey4($event)">
+                </mat-form-field>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let player4 of listOfPlayers4" [value]="player4">{{player4.first_name+" "+player4.last_name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="insertPlayer" appearance="outline">
+        <mat-label>Select player 5:</mat-label>
+        <mat-select [(ngModel)]="selectedPlayer5">
+            <mat-form-field  style="width: 100%;" appearance="fill" >
+                <input matInput  placeholder="Player name..." (keyup)="onKey5($event)">
+                </mat-form-field>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let player5 of listOfPlayers5" [value]="player5">{{player5.first_name+" "+player5.last_name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <button mat-button mat-raised-button color="primary" class="btn-send-data" (click)="submitData()" [disabled]="!enableSubmitBtn()">Create team</button>
+</main>
+<div class="footer">
+    <p>Copyright &copy; 2023 Luka Burić <br><a href="https://github.com/LukaBuricGithub/Napredne-tehnike-programiranja-web-servisa-.open-source-"><img src="../assets/img/GitHub-Mark-Light-32px.png" title="Github" alt="Github"></a></p>
+</div>

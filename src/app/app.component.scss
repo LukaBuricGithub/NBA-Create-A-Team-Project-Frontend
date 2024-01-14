@@ -1,0 +1,54 @@
+.main
+{
+  margin:0 auto;
+  width: 80%;
+  padding-top: 10px;
+}
+mat-toolbar
+{
+  background-color: #333;
+}
+.nav-items {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  flex-wrap: wrap;  
+  flex-direction: row;
+  }
+.btn
+{
+  background-color: rgba(245, 245, 245, 0.887);
+  color: black !important;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.btn:hover
+{
+  background-color: rgb(255, 255, 255);
+  outline: 2px solid black;
+}
+.img-fluid 
+{
+  max-width: 100% !important;
+  margin-right: 17% !important;
+  margin-top: 3%;
+}
+.footer
+{
+  text-align: center;
+  color: white;
+  background-color: #333;
+	clear: both;
+}
+.btn-red
+{
+  background-color: red;
+  color: black !important;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.btn-red:hover
+{
+  outline: 2px solid black;
+}
+

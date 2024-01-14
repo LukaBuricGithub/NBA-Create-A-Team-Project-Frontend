@@ -1,0 +1,57 @@
+.article
+{
+    margin:0 auto;
+    width: 80%;
+    padding-top: 10px;
+    min-height: 600px;
+}
+.game
+{
+    width: 35%;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.text-wrapper {
+    overflow: hidden;
+}
+.youtube
+{
+    color: red;
+}
+.facebook
+{
+    padding-left: 15px;
+    color: blue;
+}
+.instagram
+{
+    padding-left: 15px;
+    color:purple
+}
+.twitter
+{
+    padding-left: 15px;
+    color:black;
+}
+.social_media
+{
+    margin-bottom: 20px;
+}
+.footer
+{
+  text-align: center;
+  color: white;
+  background-color: #333;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+    .game{
+        float: left;
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 10px;
+    }
+  }

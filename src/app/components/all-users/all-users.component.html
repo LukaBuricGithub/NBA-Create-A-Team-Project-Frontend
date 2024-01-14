@@ -1,0 +1,41 @@
+<main class="article">
+
+    <h1>User administration</h1>
+    <br>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef>{{'Username'}}</th>
+        <td mat-cell *matCellDef="let element">{{element.username}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>{{'Activate/deactivate'}}</th>
+        <td mat-cell *matCellDef="let element">
+            <button class="red" mat-raised-button (click)="activateOrDeactivate(element.userID)"
+            *ngIf="checkStatus(element.isActive)">Deactivate user</button>
+
+            <button class="green" mat-raised-button (click)="activateOrDeactivate(element.userID)"
+            *ngIf="!checkStatus(element.isActive)">Activate user</button>
+      </ng-container>
+
+
+      <ng-container matColumnDef="action2">
+        <th mat-header-cell *matHeaderCellDef>{{'Edit username'}}</th>
+        <td mat-cell *matCellDef="let element">
+            <button class="primary" mat-raised-button (click)="changeUsername(element.userID)">Change username</button>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</main>
+<div class="footer">
+    <p>Copyright &copy; 2023 Luka Burić <br><a href="https://github.com/LukaBuricGithub/Napredne-tehnike-programiranja-web-servisa-.open-source-"><img src="../assets/img/GitHub-Mark-Light-32px.png" title="Github" alt="Github"></a></p>
+</div>
+
+
+
+
+

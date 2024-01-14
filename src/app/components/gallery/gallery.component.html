@@ -1,0 +1,10 @@
+<main class="article">
+<div class="imgcontainer">
+	<div class="gallery" *ngFor="let image of _albums; let i=index">
+	  <img src="{{image.thumb}}" (click)="open(i)" />
+	</div>
+</div>
+</main>
+<div class="footer">
+    <p>Copyright &copy; 2023 Luka Burić <br><a href="https://github.com/LukaBuricGithub/Napredne-tehnike-programiranja-web-servisa-.open-source-"><img src="../assets/img/GitHub-Mark-Light-32px.png" title="Github" alt="Github"></a></p>
+</div>
